@@ -59,12 +59,7 @@ async function run() {
       const updatedField = {
         $set : {
           name : body.name,
-          chef:body.chef,
-          supplier: body.supplier || 'hello',
-          taste:body.taste || 'hello',
-          category:body.category || 'hello',
-          details:body.details || 'hello',
-          photo:body.photo || 'hello'
+          chef:body.chef
         }
       }
       const result = await coffeeCollection.updateOne(query,updatedField)
